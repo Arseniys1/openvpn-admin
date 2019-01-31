@@ -169,11 +169,13 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        OVAdmin\Providers\AppServiceProvider::class,
+        OVAdmin\Providers\AuthServiceProvider::class,
+        // OVAdmin\Providers\BroadcastServiceProvider::class,
+        OVAdmin\Providers\EventServiceProvider::class,
+        OVAdmin\Providers\RouteServiceProvider::class,
+        OVAdmin\Api\ServiceProviders\SSHServiceProvider::class,
+        TwigBridge\ServiceProvider::class,
 
     ],
 
@@ -223,6 +225,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'SSH' => OVAdmin\Api\Facades\SSH::class,
+        'Twig' => TwigBridge\Facade\Twig::class,
 
     ],
 

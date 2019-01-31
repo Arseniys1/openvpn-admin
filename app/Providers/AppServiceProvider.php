@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace OVAdmin\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
